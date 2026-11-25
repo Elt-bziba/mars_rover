@@ -1,0 +1,31 @@
+package rover;
+
+public enum Direction {
+	NORTH, EAST, SOUTH, WEST;
+
+	public Direction right() {
+		switch (this) {
+		case NORTH: 
+			return EAST;
+		case EAST: 
+			return SOUTH;
+		case SOUTH: 
+			return WEST;
+		default: 
+			return NORTH;
+		}
+	}
+
+	public Direction left() {
+		switch (this) {
+		case NORTH: 
+			return WEST;
+		case WEST: 
+			return SOUTH;
+		case SOUTH: 
+			return EAST;
+		default: 
+			return NORTH;
+		}
+	}
+}
